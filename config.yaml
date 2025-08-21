@@ -1,0 +1,4 @@
+baseURL: "https://kyutark.github.io/"
+title: "Kyu-tark's Dev Blog"
+theme: "PaperMod"
+paginate: 5
