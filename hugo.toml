@@ -1,3 +1,14 @@
-baseURL = 'https://kyutark.github.io/'
-languageCode = 'en-us'
-title = 'PaperMod'
+baseURL = "https://kyutark.github.io/"
+languageCode = "en-us"
+title = "kyutark blog"
+theme = "PaperMod"
+
+[outputs]
+home    = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+taxonomy= ["HTML", "RSS"]
+term    = ["HTML", "RSS"]
+page    = ["HTML"]
+
+[pagination]
+pagerSize = 10
