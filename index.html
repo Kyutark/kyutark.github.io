@@ -3,31 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kyu Tark — Profile</title>
-  <meta name="description" content="Kyu Tark | Bioinformatics · Developer" />
+  <title>Kyutark — Profile</title>
+  <meta name="description" content="Kyutark | Bioinformatics · Developer" />
 
   <!-- Open Graph (nice preview when sharing) -->
-  <meta property="og:title" content="Kyu Tark — Profile" />
+  <meta property="og:title" content="Kyutark — Profile" />
   <meta property="og:description" content="Bioinformatics · Developer" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kyutark.github.io/" />
-  <meta property="og:image" content="https://kyutark.github.io/assets/me.jpg" />
+  <meta property="og:image" content="https://kyutark.github.io/baby_kyutark.jpg" />
 
   <link rel="icon" href="data:," />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <img src="assets/me.jpg" alt="Portrait of Kyu Tark" class="avatar" />
+    <img src="baby_kyutark.jpg" alt="Image of Kyutark" class="avatar" />
     <div class="title">
-      <h1>Kyu Tark</h1>
-      <p class="role">Bioinformatics · Developer</p>
+      <h1>Kyutark Kim</h1>
+      <p class="role">Bioinformatics</p>
       <nav aria-label="primary" class="links">
-        <a href="mailto:youremail@example.com">Email</a>
-        <a href="https://github.com/kyutark" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://tistory.com" target="_blank" rel="noreferrer">Blog</a>
-        <a href="cv/kyutark_cv.pdf" class="btn" target="_blank" rel="noreferrer">Open CV</a>
-        <a href="cv/kyutark_cv.pdf" class="btn outline" download>Download CV</a>
+        <a href="mailto:kyutkim01@gmail.com">Email</a>
+        <a href="https://github.com/Kyutark" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://kyutkim01.tistory.com/" target="_blank" rel="noreferrer">Blog</a>
+        <a href="./kyutark_cv.pdf" class="btn" target="_blank" rel="noreferrer">CV</a>
       </nav>
     </div>
   </header>
@@ -36,41 +35,33 @@
     <section>
       <h2>About</h2>
       <p>
-        I work at the intersection of data and biology. I value reproducible
-        analysis, simple code, and clear communication.
+        I Explore the Cosmos of Biological Information, Traversing the Realms of Code and Life.
       </p>
     </section>
 
     <section>
-      <h2>Experience</h2>
+      <h2>Education</h2>
       <ul class="tight">
-        <li><strong>Role / Company</strong> — 2024–Present<br />Short one-line impact statement.</li>
-        <li><strong>Role / Company</strong> — 2022–2024<br />Another concise line about outcomes.</li>
+        <li><strong>Gyeongnam Science High School</strong> — 2016–2019</li>
+        <li><strong>Korea University</strong> — 2019–2025<br />B.S. in Biotechnology.</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Selected Projects</h2>
-      <ul>
-        <li><a href="#">Project Name</a> — one sentence about what it does.</li>
-        <li><a href="#">Another Project</a> — quick description and tech stack.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Publications</h2>
-      <ul>
-        <li>Lastname, K., <em>et al.</em> “Paper Title.” <span class="muted">Journal, 2025.</span></li>
-      </ul>
-    </section>
   </main>
 
   <footer class="site-footer">
-    <small>© <span id="y"></span> Kyu Tark</small>
+    <small>© <span id="y"></span> Kyutark Kim</small>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    const d = new Date();
+    const year = d.getFullYear();
+    const monthNames = [
+      "January","February","March","April","May","June",
+      "July","August","September","October","November","December"
+    ];
+    const month = monthNames[d.getMonth()];
+    document.getElementById("y").textContent = `${month} ${year}`;
   </script>
 </body>
 </html>
