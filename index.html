@@ -1,9 +1,76 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>Hello World</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  html,body{height:100%;margin:0}
-  body{display:flex;align-items:center;justify-content:center;font:16px/1.6 system-ui,Segoe UI,Roboto,Helvetica,Arial}
-</style>
-Hello World
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kyu Tark — Profile</title>
+  <meta name="description" content="Kyu Tark | Bioinformatics · Developer" />
+
+  <!-- Open Graph (nice preview when sharing) -->
+  <meta property="og:title" content="Kyu Tark — Profile" />
+  <meta property="og:description" content="Bioinformatics · Developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kyutark.github.io/" />
+  <meta property="og:image" content="https://kyutark.github.io/assets/me.jpg" />
+
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/me.jpg" alt="Portrait of Kyu Tark" class="avatar" />
+    <div class="title">
+      <h1>Kyu Tark</h1>
+      <p class="role">Bioinformatics · Developer</p>
+      <nav aria-label="primary" class="links">
+        <a href="mailto:youremail@example.com">Email</a>
+        <a href="https://github.com/kyutark" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://tistory.com" target="_blank" rel="noreferrer">Blog</a>
+        <a href="cv/kyutark_cv.pdf" class="btn" target="_blank" rel="noreferrer">Open CV</a>
+        <a href="cv/kyutark_cv.pdf" class="btn outline" download>Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>About</h2>
+      <p>
+        I work at the intersection of data and biology. I value reproducible
+        analysis, simple code, and clear communication.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ul class="tight">
+        <li><strong>Role / Company</strong> — 2024–Present<br />Short one-line impact statement.</li>
+        <li><strong>Role / Company</strong> — 2022–2024<br />Another concise line about outcomes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Selected Projects</h2>
+      <ul>
+        <li><a href="#">Project Name</a> — one sentence about what it does.</li>
+        <li><a href="#">Another Project</a> — quick description and tech stack.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ul>
+        <li>Lastname, K., <em>et al.</em> “Paper Title.” <span class="muted">Journal, 2025.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="y"></span> Kyu Tark</small>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
