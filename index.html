@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <title>Kyutark — Profile</title>
   <meta name="description" content="Kyutark | Bioinformatics · Developer" />
 
-  <!-- Open Graph (nice preview when sharing) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Kyutark — Profile" />
   <meta property="og:description" content="Bioinformatics · Developer" />
   <meta property="og:type" content="website" />
@@ -14,19 +15,26 @@
   <meta property="og:image" content="https://kyutark.github.io/baby_kyutark.jpg" />
 
   <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <img src="baby_kyutark.jpg" alt="Image of Kyutark" class="avatar" />
+    <!-- CLS 방지를 위해 width/height 지정, 반응형 표시를 위해 inline style 추가 -->
+    <img
+      src="baby_kyutark.jpg"
+      alt="Image of Kyutark"
+      class="avatar"
+      width="800"
+      height="800"
+      style="max-width:100%;height:auto"
+    />
     <div class="title">
       <h1>Kyutark Kim</h1>
       <p class="role">Bioinformatics</p>
       <nav aria-label="primary" class="links">
         <a href="mailto:kyutkim01@gmail.com">Email</a>
-        <a href="https://github.com/Kyutark" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://kyutkim01.tistory.com/" target="_blank" rel="noreferrer">Blog</a>
-        <a href="./kyutark_cv.pdf" class="btn" target="_blank" rel="noreferrer">CV</a>
+        <a href="https://github.com/Kyutark" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://kyutkim01.tistory.com/" target="_blank" rel="noopener noreferrer">Blog</a>
+        <a href="./kyutark_cv.pdf" class="btn" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
     </div>
   </header>
@@ -35,7 +43,7 @@
     <section>
       <h2>About</h2>
       <p>
-        I Explore the Cosmos of Biological Information, Traversing the Realms of Code and Life.
+        I explore the cosmos of biological information, traversing the realms of code and life.
       </p>
     </section>
 
@@ -46,7 +54,6 @@
         <li><strong>Korea University</strong> — 2019–2025<br />B.S. in Biotechnology.</li>
       </ul>
     </section>
-
   </main>
 
   <footer class="site-footer">
