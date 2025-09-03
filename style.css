@@ -11,6 +11,12 @@ body {
   background-color: #fff;
 }
 
+.custom-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .icon {
   width: 16px;
   height: 16px;
