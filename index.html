@@ -15,60 +15,75 @@
   <meta property="og:image" content="https://kyutark.github.io/baby_kyutark.jpg" />
 
   <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <!-- CLS 방지를 위해 width/height 지정, 반응형 표시를 위해 inline style 추가 -->
-    <img
-      src="baby_kyutark.jpg"
-      alt="Image of Kyutark"
-      class="avatar"
-      width="800"
-      height="800"
-      style="max-width:100%;height:auto"
-    />
-    <div class="title">
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="baby_kyutark.jpg" alt="Kyutark's photo" class="avatar" />
       <h1>Kyutark Kim</h1>
       <p class="role">Bioinformatics</p>
-      <nav aria-label="primary" class="links">
-        <a href="mailto:kyutkim01@gmail.com">Email</a>
-        <a href="https://github.com/Kyutark" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://kyutkim01.tistory.com/" target="_blank" rel="noopener noreferrer">Blog</a>
-        <a href="./kyutark_cv.pdf" class="btn" target="_blank" rel="noopener noreferrer">CV</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section>
-      <h2>About</h2>
-      <p>
-        I explore the cosmos of biological information, traversing the realms of code and life.
-      </p>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <ul class="tight">
-        <li><strong>Gyeongnam Science High School</strong> — 2016–2019</li>
-        <li><strong>Korea University</strong> — 2019–2025<br />B.S. in Biotechnology.</li>
+      <ul class="contact-links">
+        <li><a href="mailto:kyutkim01@gmail.com">📧 Email</a></li>
+        <li><a href="https://github.com/Kyutark" target="_blank">💻 GitHub</a></li>
+        <li><a href="https://kyutkim01.tistory.com/" target="_blank">📝 Blog</a></li>
+        <li><a href="./kyutark_cv.pdf" target="_blank">📄 CV</a></li>
       </ul>
-    </section>
-  </main>
+    </aside>
 
+    <!-- Main Content -->
+    <main class="content">
+      <section>
+        <h2>About</h2>
+        <p>I explore the cosmos of biological information, traversing the realms of code and life.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Gyeongnam Science High School</strong> — 2016–2019</li>
+          <li><strong>Korea University</strong> — 2019–2025<br />B.S. in Biotechnology</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Research</h2>
+        <p>Details about your research projects, publications, or lab work.</p>
+      </section>
+
+      <section>
+        <h2>Academic Achievements</h2>
+        <ul>
+          <li>Published in XYZ Journal (2023)</li>
+          <li>Presented at ABC Bioinformatics Conference (2024)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Honors</h2>
+        <ul>
+          <li>National Science Scholarship (2022)</li>
+          <li>Dean’s List — Korea University (2021–2024)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <small>© <span id="y"></span> Kyutark Kim</small>
+    <small>© <span id="footer-date"></span> Kyutark Kim</small>
   </footer>
 
   <script>
     const d = new Date();
-    const year = d.getFullYear();
     const monthNames = [
       "January","February","March","April","May","June",
       "July","August","September","October","November","December"
     ];
     const month = monthNames[d.getMonth()];
-    document.getElementById("y").textContent = `${month} ${year}`;
+    const year = d.getFullYear();
+    document.getElementById("footer-date").textContent = `${month} ${year}`;
   </script>
 </body>
 </html>
