@@ -11,6 +11,13 @@ body {
   background-color: #fff;
 }
 
+.icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
 .layout {
   display: flex;
   flex-direction: row;
