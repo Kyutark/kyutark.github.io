@@ -1,3 +1,8 @@
+/* 기본 스타일 */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -9,6 +14,7 @@ body {
 .layout {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
   padding: 20px;
@@ -22,8 +28,11 @@ body {
 
 .avatar {
   width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 .contact-links {
@@ -45,6 +54,12 @@ h1 {
   margin-top: 0.5em;
 }
 
+.role {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 h2 {
   margin-top: 1.5em;
   font-size: 1.4em;
@@ -61,7 +76,7 @@ h2 {
   margin-top: 40px;
 }
 
-/* For Dark Mode */
+/* 🌙 다크모드 대응 */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
@@ -86,7 +101,7 @@ h2 {
   }
 }
 
-/* For Mobile */
+/* 📱 모바일 대응 */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -101,9 +116,11 @@ h2 {
   }
 
   .avatar {
+    width: 100%;
     max-width: 300px;
-    margin: 0 auto;
+    height: auto;
     display: block;
+    margin: 0 auto;
   }
 
   .contact-links {
@@ -118,5 +135,10 @@ h2 {
 
   h1, .role {
     text-align: center;
+  }
+
+  .site-footer {
+    font-size: 0.8em;
+    padding: 15px;
   }
 }
