@@ -22,8 +22,10 @@ body {
 
 .sidebar {
   width: 20%;
+  min-width: 200px;
   padding-right: 20px;
   border-right: 1px solid #ccc;
+  word-break: break-word;
 }
 
 .avatar {
@@ -76,7 +78,7 @@ h2 {
   margin-top: 40px;
 }
 
-/* 🌙 For DarkMode */
+/* For Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
@@ -101,8 +103,13 @@ h2 {
   }
 }
 
-/* For Mobile Users */
+/* For Mobiles */
 @media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    padding: 10px;
+  }
+
   .sidebar {
     display: flex;
     flex-direction: row;
@@ -134,6 +141,7 @@ h2 {
   .sidebar h1,
   .sidebar .role {
     text-align: left;
+    margin-bottom: 0.5em;
   }
 
   .contact-links {
@@ -144,5 +152,15 @@ h2 {
 
   .contact-links li {
     margin-bottom: 6px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .site-footer {
+    font-size: 0.8em;
+    padding: 15px;
   }
 }
