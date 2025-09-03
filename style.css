@@ -1,4 +1,4 @@
-/* 기본 스타일 */
+/* Basic Style */
 * {
   box-sizing: border-box;
 }
@@ -76,7 +76,7 @@ h2 {
   margin-top: 40px;
 }
 
-/* 🌙 다크모드 대응 */
+/* 🌙 For DarkMode */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
@@ -101,18 +101,24 @@ h2 {
   }
 }
 
-/* 📱 모바일 대응 */
+/* For Users */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
     padding: 10px;
   }
 
-  .sidebar,
-  .content {
+  .sidebar {
     width: 100%;
     padding: 0;
     border: none;
+    order: -1;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0;
   }
 
   .avatar {
@@ -120,13 +126,15 @@ h2 {
     max-width: 300px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px;
   }
 
   .contact-links {
-    text-align: center;
-    padding-left: 0;
     list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
   }
 
   .contact-links li {
@@ -135,10 +143,8 @@ h2 {
 
   h1, .role {
     text-align: center;
-  }
-
-  .site-footer {
-    font-size: 0.8em;
-    padding: 15px;
+    margin: 0.5em 0;
+    word-break: keep-all;
   }
 }
+
