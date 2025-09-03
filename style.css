@@ -26,6 +26,9 @@ body {
   padding-right: 20px;
   border-right: 1px solid #ccc;
   word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .avatar {
@@ -34,32 +37,37 @@ body {
   height: auto;
   border-radius: 8px;
   display: block;
-  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.sidebar-info {
+  text-align: center;
+}
+
+.sidebar-info h1 {
+  font-size: 1.8em;
+  margin: 0.5em 0 0.2em;
+}
+
+.role {
+  font-size: 1em;
+  margin-bottom: 1em;
 }
 
 .contact-links {
   list-style: disc;
   padding-left: 20px;
+  text-align: left;
 }
 
 .contact-links li {
   margin-bottom: 8px;
 }
 
+/* 본문 */
 .content {
   width: 80%;
   padding-left: 20px;
-}
-
-h1 {
-  font-size: 1.8em;
-  margin-top: 0.5em;
-}
-
-.role {
-  font-size: 1em;
-  text-align: center;
-  margin-bottom: 1em;
 }
 
 h2 {
@@ -103,7 +111,7 @@ h2 {
   }
 }
 
-/* For Mobiles */
+/* For Mobile Users */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -111,37 +119,36 @@ h2 {
   }
 
   .sidebar {
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     padding: 10px 0;
     border: none;
-    order: -1;
   }
 
   .avatar {
-    width: 40%;
-    max-width: 150px;
+    flex: 0 0 auto;
+    width: 100px;
     height: auto;
     border-radius: 8px;
-    display: block;
     margin: 0;
   }
 
-  .sidebar h1,
-  .sidebar .role,
-  .sidebar .contact-links {
-    width: 60%;
-    margin: 0;
+  .sidebar-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .sidebar h1,
-  .sidebar .role {
+  .sidebar-info h1,
+  .sidebar-info .role,
+  .contact-links {
+    margin: 0;
+    margin-bottom: 6px;
     text-align: left;
-    margin-bottom: 0.5em;
   }
 
   .contact-links {
