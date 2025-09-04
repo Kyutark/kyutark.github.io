@@ -63,13 +63,23 @@ body {
 }
 
 .role {
-  font-size: 1em;
-  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.8em;
+}
+
+.line.left {
+  text-align: left;
+}
+
+.line.right {
+  text-align: right;
 }
 
 .contact-links {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 5px;
   text-align: left;
 }
 
