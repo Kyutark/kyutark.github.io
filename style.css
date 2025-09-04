@@ -63,18 +63,12 @@ body {
 }
 
 .role {
+  text-align: center;
+  font-size: 0.8em;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 0.8em;
-}
-
-.line.left {
-  text-align: left;
-}
-
-.line.right {
-  text-align: right;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .contact-links {
@@ -87,15 +81,34 @@ body {
   margin-bottom: 8px;
 }
 
-/* 본문 */
+/* BODY */
 .content {
   width: 80%;
   padding-left: 20px;
 }
 
+.content ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.date {
+  float: right;
+  font-style: italic;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.spaced {
+  margin-bottom: 30px !important;
+}
+
 h2 {
   margin-top: 1.5em;
-  font-size: 1.4em;
+  font-size: 1.2em;
   border-bottom: 1px solid #ddd;
   padding-bottom: 4px;
 }
