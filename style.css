@@ -88,8 +88,8 @@ body {
 }
 
 .content ul {
-  list-style-type: none;
-  padding-left: 20px;
+  list-style-type: disc;
+  padding-left: 30px;
   margin-bottom: 1em;
 }
 
