@@ -1,4 +1,4 @@
-/* Basic Style */
+/* Base */
 * {
   box-sizing: border-box;
 }
@@ -8,34 +8,35 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
+  background: #fff;
 }
 
 .custom-link {
   color: inherit;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .icon {
   width: 16px;
   height: 16px;
-  vertical-align: middle;
   margin-right: 6px;
+  vertical-align: middle;
 }
 
+/* Layout */
 .layout {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
   max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
 
 .sidebar {
-  width: 20%;
-  min-width: 200px;
+  flex: 0 0 240px;
+  max-width: 300px;
   padding-right: 20px;
   border-right: 1px solid #ccc;
   word-break: break-word;
@@ -46,7 +47,6 @@ body {
 
 .avatar {
   width: 100%;
-  max-width: 300px;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -81,25 +81,26 @@ body {
   margin-bottom: 8px;
 }
 
-/* BODY */
+/* Content */
 .content {
-  width: 80%;
+  flex: 1 1 600px;
+  min-width: 0;
   padding-left: 20px;
 }
 
 .content ul {
-  list-style-type: disc;
+  list-style: disc;
   padding-left: 30px;
   margin-bottom: 1em;
+}
+
+.content li {
+  margin-bottom: 10px;
 }
 
 .date {
   float: right;
   font-style: italic;
-}
-
-.content li {
-  margin-bottom: 10px;
 }
 
 .spaced {
@@ -113,6 +114,7 @@ h2 {
   padding-bottom: 4px;
 }
 
+/* Footer */
 .site-footer {
   text-align: center;
   padding: 20px;
@@ -122,10 +124,10 @@ h2 {
   margin-top: 40px;
 }
 
-/* For Dark Mode */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212;
+    background: #121212;
     color: #e0e0e0;
   }
 
@@ -147,29 +149,31 @@ h2 {
   }
 }
 
-/* For Mobile User */
+/* Mobile */
 @media (max-width: 768px) {
+  .layout {
+    gap: 16px;
+    padding: 16px;
+  }
+
   .sidebar {
+    flex: 1 1 100%;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: 10px 0;
+    gap: 16px;
+    padding-right: 0;
     border: none;
   }
 
   .avatar {
-    flex: 0 0 auto;
     width: 100px;
-    height: auto;
-    border-radius: 8px;
     margin: 0;
+    flex: 0 0 auto;
   }
 
   .sidebar-info {
-    flex-grow: 1;
-    width: 100%;
+    flex: 1;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,13 +182,10 @@ h2 {
   .sidebar-info h1,
   .sidebar-info .role,
   .contact-links {
-    margin: 0;
-    margin-bottom: 6px;
-    text-align: left;
+    margin: 0 0 6px;
   }
 
   .contact-links {
-    list-style: none;
     padding-left: 0;
     margin-top: 10px;
   }
@@ -192,5 +193,9 @@ h2 {
   .contact-links li {
     margin-bottom: 6px;
   }
-}
 
+  .content {
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+}
